@@ -17,6 +17,10 @@ document.getElementById("btnLuong").onclick = function () {
 };
 
 // Bài 02: Tính giá trị trung bình
+// B1: Tạo sự kiện khi click vào nút btn_KQ
+// B2: Khai báo biến (so1, so2, so3, so4, so5) để lưu trữ giá trị người dùng nhập vào
+// B3: Thực hiện tính trung bình cộng các số và show kết quả ở biến ketQua
+// B4: Thực hiện trả kết quả kèm theo mô tả để người dùng dễ hình dung
 document.getElementById("btn_KQ").onclick = function () {
   let so1 = document.getElementById("so1").value * 1;
   let so2 = document.getElementById("so2").value * 1;
@@ -46,6 +50,11 @@ document.getElementById("btn_KQ").onclick = function () {
 };
 
 // bài 03: Quy đổi tiển
+// B1: Tạo sự kiện khi click vào nút btnTien
+// B2: Khai báo biến soTien để lưu trữ giá trị khi user nhập vào
+// B3: Khai báo biến quyDoiTien để thực hiện tính toán
+// B4: Thực hiện show kết quả vừa tính được ra màn hình
+
 document.getElementById("btnTien").onclick = function () {
   let soTien = document.getElementById("soTien").value * 1;
   let quyDoiTien = soTien * 23.5;
