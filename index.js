@@ -68,6 +68,12 @@ document.getElementById("btnTien").onclick = function () {
 };
 
 // Bài 4: Tính diện tích, chu vi hình chữ nhật
+// B1: Tạo sự kiện khi click vào nút btnChuVi, và button btnDienTich
+// B2: Khai báo biến chieuDai, chieuRong, để lưu trữ giá trị (Chiều dài, chiều rộng) của hình khi user nhập vào
+// B3: Khai báo biến chuVihcn để thực hiện tính chu vi hình chữ nhật theo công thức (chiều dài + chiều rộng) * 2
+// B4: Khai báo biến dienTichhcn để thực hiện tính diện tích hình chữ nhật theo công thức (chiều dài * chiều rộng)
+// B5: Thực hiện show kết quả vừa tính ra màn hình
+
 document.getElementById("btnChuVi").onclick = function () {
   let chieuDai = document.getElementById("dai").value * 1;
   let chieuRong = document.getElementById("rong").value * 1;
@@ -89,12 +95,22 @@ document.getElementById("btnDienTich").onclick = function () {
 };
 
 // Bài 5: Tính tổng 2 ký số
+// B1: Tạo sự kiện khi click vào button btnTong
+// B2: Khai báo biến number để lưu trữ giá trị khi user nhập vào
+
 document.getElementById("btnTong").onclick = function () {
   let number = document.getElementById("number").value * 1;
+  number = parseInt(number);
 
-  let num1 = number / 10;
-  let num2 = number % 10;
-  let total = num1 + num2;
-  console.log(total);
-  document.getElementById("ketQua5").innerHTML = "Tổng 2 ký số : " + total;
+  if (number <= 10 || number > 100) {
+    // return;
+    document.getElementById("ketQua5").innerHTML =
+      "Bạn vui lòng nhập lại theo giá trị đề bài yêu cầu";
+  } else {
+    let num1 = number % 10;
+    let num2 = Math.floor(number / 10);
+    let total = num1 + num2;
+    console.log(total);
+    document.getElementById("ketQua5").innerHTML = "Tổng 2 ký số : " + total;
+  }
 };
