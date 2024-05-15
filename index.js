@@ -6,14 +6,18 @@
 
 document.getElementById("btnLuong").onclick = function () {
   let luong = document.getElementById("soNgayLam").value * 1;
-  let result_01 = luong * 100000;
-  console.log(result_01);
-  document.getElementById("ketQua2").innerHTML =
-    "Tiền lương nhân viên: " +
+  if (luong >= 1) {
+    let result_01 = luong * 100000;
+    console.log(result_01);
+    document.getElementById("ketQua2").innerHTML =
+      "Tiền lương nhân viên: " + result_01;
     result_01.toLocaleString("vi", {
       style: "currency",
       currency: "VND",
     });
+  } else {
+    return alert("Bạn vui lòng nhập lại số khác nhé!!!");
+  }
 };
 
 // Bài 02: Tính giá trị trung bình
@@ -30,23 +34,9 @@ document.getElementById("btn_KQ").onclick = function () {
 
   let ketQua = (so1 + so2 + so3 + so4 + so5) / 5;
   console.log(ketQua);
-  // console.log("hihihi");
-  // document.getElementById("ketQua").innerHTML =
-  //   "Giá trị trung bình cộng: " +
-  //   ketQua.toLocaleString("vi", {
-  //     style: "text",
-  //   });
+
   document.getElementById("ketQua1").innerHTML =
-    "So tien luong ban lam duoc thang nay: " +
-    ketQua.toLocaleString("vi", {
-      style: "currency",
-      currency: "VND",
-    });
-  // +
-  // ketQua.toLocaleString("vi", {
-  //   style: "currency",
-  //   // currency: "VND",
-  // });
+    "Giá trị trung bình của 5 số trên: " + ketQua;
 };
 
 // bài 03: Quy đổi tiển
@@ -81,7 +71,7 @@ document.getElementById("btnChuVi").onclick = function () {
   let chuVihcn = (chieuDai + chieuRong) * 2;
   console.log(chuVihcn);
   document.getElementById("chuVi").innerHTML =
-    "Chu vi hình chữ nhật: " + chuVihcn;
+    "Chu vi hình chữ nhật: " + chuVihcn + "m";
 };
 
 document.getElementById("btnDienTich").onclick = function () {
@@ -91,7 +81,7 @@ document.getElementById("btnDienTich").onclick = function () {
   let dienTichhcn = chieuDai * chieuRong;
   console.log(dienTichhcn);
   document.getElementById("dienTich").innerHTML =
-    "Diện tích hình chữ nhật: " + dienTichhcn;
+    "Diện tích hình chữ nhật: " + dienTichhcn + "m2";
 };
 
 // Bài 5: Tính tổng 2 ký số
